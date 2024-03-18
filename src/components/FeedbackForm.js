@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Card from "./Card"
+import Button from "./Button"
 
 function FeebackForm() {
     const [text, setText] = useState('')
@@ -14,8 +15,8 @@ function FeebackForm() {
                 <h2>How would you rate our services?</h2>
                 <div className="input-group">
                     <input type="text" placeholder="Write a review" value={text} onChange={handleTextChange}/>
+                    <Button type="submit"> Send </Button>
                 </div>
-                <button type="submit"></button>
             </form>
         </Card>
     )
