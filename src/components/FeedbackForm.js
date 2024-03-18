@@ -2,17 +2,21 @@ import { useState } from "react"
 import Card from "./Card"
 
 function FeebackForm() {
-    const [text, setText] = useState()
+    const [text, setText] = useState('')
 
     function handleTextChange(e) {
-        setText(e.input.value)
+        setText(e.target.value)
     }
 
     return (
         <Card>
-            <h2>How would you rate our services?</h2>
-            <input type="text" placeholder="provide feeback" value={text} onChange={handleTextChange}/>
-            <button type="submit"></button>
+            <form>
+                <h2>How would you rate our services?</h2>
+                <div className="input-group">
+                    <input type="text" placeholder="Write a review" value={text} onChange={handleTextChange}/>
+                </div>
+                <button type="submit"></button>
+            </form>
         </Card>
     )
 }
