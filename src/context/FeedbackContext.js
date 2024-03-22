@@ -7,8 +7,8 @@ export const FeedbackProvider = ({children}) => {
     const [feedback, setFeedback] = useState([
         {
             id: "1", 
-            text: "text", 
-            rating: "message"
+            text: "Text is comming from Context", 
+            rating: "10"
         }
     ])
 
